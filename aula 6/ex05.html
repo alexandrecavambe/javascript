@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex005</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 3em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let nome = prompt("Digite seu nome")
+        let idade = Number(prompt("Digte sua idade: "))
+        let altura = Number(prompt("Digite sua altura"))
+
+        let salario = Number(prompt("Qual é seu salário?"))
+        
+        document.writeln(`Meu nome é ${nome}, Esse nome tem ${nome.length} letras, em maiúscula, ela fica assim: ${nome.toUpperCase()} e em minúscula, fica assim: ${nome.toLowerCase()}`)
+        document.writeln(`<br> Minha idade é: ${idade}, e minha altura é: ${altura.toFixed(2)}`)
+
+        document.writeln(`<br> Meu salário mensal é de: ${salario.toFixed(2).replace(".", ",")}`)
+
+        document.writeln(`Meu salário é ${salario.toString("pt-BR", {style:"currency", currency: "BRL"})}`)
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento</title>
+    <style>
+        body{
+            height: 100vh;
+            background-color: rgb(146, 75, 212);
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-left: 10px;
+        }
+        h1{
+            background-color: palevioletred;
+            color: white;
+            font-size: 3em;
+            font-weight: bold;
+            text-align: center;
+            padding: 20px;
+        }
+        section{
+            padding-top: 10vh;
+            padding-bottom: 10vh;
+            padding-left: 20px;
+            margin-bottom: 10px;
+            border: 2px solid rgba(0, 0, 0, 0.197);
+        }
+
+        section h2{
+            background-image: linear-gradient(to right, pink, transparent);
+            font-size: 1em;  
+            padding: 20px;
+            margin-bottom: 10px;
+        }
+        section p{
+            background-color: rgba(0, 0, 255, 0.194);
+            color: white;
+            padding: 10px;
+            margin-bottom: 10px;
+            width: 200px;
+            border: 1px solid rgba(0, 0, 0, 0.206);
+            border-bottom: 10px;
+        }
+        
+        
+        
+    </style>
+</head>
+<body>
+    <h1>Aprendendo sobre: </h1>
+    <section>
+        <h2>length</h2>
+        <p>ex: nome.length</p>
+        <h2>toUpperCase</h2>
+        <p>ex: nome.toUpperCase()</p>
+        <h2>toLowerCase</h2>
+        <p>ex: nome.toLowerCase</p>
+    </section>
+    <script>
+        let nome = prompt("Qual é o seu nome?")
+        /*document.write(nome)//uso do documento.write, serve para imprimir os dados nalvos na memória depois do prompt.*/
+
+        /*document.write(`Seu nome ${nome}, tem ${nome.length} letras <br>`)*/
+        document.write(`Olá ${nome}, seu nome tem ${nome.length} letras, em maiúscula é ${nome.toUpperCase()}, e em minúscula é ${nome.toLowerCase()}`)
+
+    </script>
+</body>
+</html>

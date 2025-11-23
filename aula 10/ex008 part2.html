@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operações</title>
+</head>
+<body>
+    <main class="container">
+        <h1>Operações</h1>
+        <form action="#">
+            <input type="number" name="number1" id="number1" placeholder="0"> +
+            <input type="number" name="number2" id="number2" placeholder="0">
+            <input type="button" value="Enter" onclick="operar()">
+        </form>
+        <div class="result">Resultado</div>
+    </main>
+    <script>
+       
+        function operar(){
+             let n1 = Number(document.getElementById("number1").value)
+             let n2 = Number(document.getElementById("number2").value)
+             res = document.querySelector(".result")
+             let soma = (n1 + n2)/n1*n2
+             res.innerHTML = soma
+        }
+    </script>
+</body>
+</html>
