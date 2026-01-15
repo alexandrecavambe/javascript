@@ -7,19 +7,22 @@
 </head>
 <body>
     <h1>Estrangeiro Ou Não?</h1>
-    <input type="text" id="nac">
-    <input type="button" value="Verificar" onclick="verifiq()">
+    <input type="text" id="nacional">
+    <button type="button" onclick="verify()" value="verify">Verificar</button>
     <div id="res"></div>
     <script>
-        function verifiq(){
-            let país = document.getElementById("nac")
-            let res = document.getElementById("res")
+        function verify(){
+            let pais = document.getElementById("nacional").value
+            let result = document.getElementById("res").value
+
+            pais.toString()
+            result.toString()
             
-            if(país == "Angola"){
-                res.innerHTML = "És Angolano"
+            if(pais == "Angola"){
+                result.innerHTML = "És Angolano"
             }
             else{
-                res.innerHTML = "És Estrangeiro"
+                result.innerHTML = "És Estrangeiro"
             }
         }
         
