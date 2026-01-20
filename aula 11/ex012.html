@@ -60,14 +60,25 @@
                     border-radius: 5px;
                     border: none;
                     outline: none;
+
+                    &:hover{
+                        background-color: #6989e7;
+                        width: 255px;
+                        margin: auto;
+                        transform: scale(1.1);
+                        z-index: 2;
+                        
+                    }
                 }
 
                 #res{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                     width: 90%;
                     height: 50px;
                     text-align: center;
-                    padding-top: 5px;
-
+                    margin-left: 8px;
                 }
 
             }
@@ -92,13 +103,14 @@
             let pais = document.getElementById("nacional").value
             let result = document.getElementById("res")
             
-            if(pais == "Angola"){
-                result.innerHTML = `Seu país é ${pais}<br>`
-                result.innerHTML += "Sua nacionalidade é angolana"
-            }
-            else{
-                result.innerHTML = `Seu pais é ${pais}<br>`
-                result.innerHTML += `Você é estrangeiro`
+            if(pais === ''){
+                result.innerHTML = "Por favor, digite o país!"
+            }else if(pais === 'Angola'){
+                result.innerHTML = `Seu país é ${pais}!<br>`
+                result.innerHTML += "Sua nacionalidade é angolana."
+            }else{
+                result.innerHTML = `Seu pais é ${pais}!<br>`
+                result.innerHTML += `Você é estrangeiro.`
             }
         }
         
