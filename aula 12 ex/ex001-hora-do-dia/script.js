@@ -7,7 +7,7 @@ let corpo = document.body
 
  function carregar(){
     let data = new Date()
-    let hora = data.getHours()
+    let hora = data.getHours()                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
     msg.innerHTML = `Agora são ${hora} horas`
     if(hora >= 0 && hora < 12){
         //Bom dia!
