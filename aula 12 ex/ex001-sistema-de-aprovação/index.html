@@ -25,31 +25,40 @@
         .container{
             width: 400px;
             height: auto;
+            display: flex;
+            flex-direction: column;
             background-color: #fff;
             border-radius: 10px;
             box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.407);
             padding: 15px;
             margin: auto;
         }
-
-        #text{
-            width: 200px;
-            height: 30px;
+        label{
+            text-align: center;
             padding: 10px;
+        }
+        #textnota{
+            width: 350px;
+            height: 28px;
+            padding: 10px;
+            margin: 5px auto;
             border: 1px solid #000;
             border-radius: 5px;
             outline: none;
         }
 
         button{
+            width: 350px;
             font-weight: 600;
             padding: 5px;
             border-radius: 5px;
-            border: 1px solid #00000086;
+            border: 1px solid #000000d0;
             cursor: pointer;
+            margin: auto;
+            transition: 0.3s;
 
             &:hover{
-                background-color: rgba(0, 0, 0, 0.407);
+                background-color: rgba(0, 0, 0, 0.864);
                 color: #fff;
             }
 
@@ -62,7 +71,7 @@
             font-size: 16px;
             text-align: center;
         }
-        
+
         footer{
             text-align: center;
             font-style: italic;
@@ -77,14 +86,31 @@
     <header>Sistema de Aprovação</header>
     <main class="container">
         <label>Digite sua nota</label>
-        <input type="text" name="" id="text">
+        <input type="text" name="" id="textnota">
         <button type="button" value="verificar" id="verify">Verificar</button>
         <div id="res">Preencha os dados acima para ver seu resultado!</div>
     </main>
     <footer>@alexandrecabambe</footer>
 
     <script>
+        let nota = document.querySelector('#textnota')
+        let result = document.querySelector('#res')
+        let verifica = document.querySelector('#verify')
+        verifica.addEventListener('click', verificar)
 
+        function verificar(){
+            if(nota.value.length === 0){
+                result.innerHTML = 'Digite a sua nota, por favor!'
+                result.style.color = 'red'
+            }else if(Number(nota.value) > 20){
+                result.innerHTML = '[Erro]: Por favor, digite sua nota!'
+                result.style.color = 'red'
+            }else if(Number(nota.value) < 9.5){
+                result.innerHTML = `A sua é nota é: ${nota.value}. Aluno <strong style = 'color: red'>Reprovado</strong>`
+            }else{
+                result.innerHTML = `A sua é nota é: ${nota.value}. Aluno <strong style = 'color: blue'>Aprovado</strong>.`
+            }
+        }
     </script>
 </body>
 </html>
